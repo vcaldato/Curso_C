@@ -1,22 +1,25 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int main(){
+void main(){
+    //Faça um programa em C que leia os elementos de uma 
+    //matriz do tipo inteiro com tamanho 10 X 10. Ao final, imprima
+//todos os elementos.
 
-    char nome [100];
-    char endereco[100];
-    char telefone[100];
+int matriz[10][10];
 
-    printf("Digite seu nome: ");
-    scanf("%[^\n]%*c",nome);
+printf("Digite os elementos da matriz: \n");
+for(int i = 0; i < 10; i++){
+    for(int j = 0; j <10; j++){
+        scanf("%d", &matriz[i][j]);   
+    }
+}
+printf("Elementos da matriz: \n");
+for(int i = 0; i < 10; i++){
+    for (int j = 0; j < 10; j++){
+        printf("%d ", matriz[i][j]);
+    }
+}
 
-    printf("Digite seu endereço: ");
-    scanf("%[^\n]%*c", endereco);
 
-    printf("Digite seu telefone: ");
-    scanf("%[^\n]%*c", telefone);
-
-    printf("Dados do Cliente:\n");
-    printf("Nome: %s\n", nome);
-    printf("Endereco: %s\n", endereco);
-    printf("Telefone: %s\n", telefone);
 }

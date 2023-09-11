@@ -1,27 +1,26 @@
 #include <stdio.h>
+#include<stdlib.h>
 
-int main(){
-    double num1, num2;
-    double adicao, subtracao, divisao, multiplicacao;
+void main() {
+    //Faça um programa que leia os elementos de uma matriz
+    // do tipo inteiro com tamanho 3 X 3 e imprima os elementos
+    //  multiplicando por 2
 
-    printf("Digite um numero real: ");
-    scanf("%lf",&num1);
-    printf("Digite o segundo numero real: ");
-    scanf("%lf",&num2);
+    int matriz[3][3];
+   
 
-     adicao = num1 + num2;
-     subtracao = num1 - num2;
-     multiplicacao = num1 * num2;
-     divisao = num1 / num2;
+    printf("Digite elementos para a matriz: \n");
+    for(int i = 0; i < 3; i++){
+        for(int j =0; j < 3; j++){
+            scanf("%d", &matriz[i][j]);
+        }
 
-
-
-     printf("Adição: %lf\n",adicao );
-    printf("Subtração: %lf\n",subtracao);
-    printf("Multiplicação: %lf\n",multiplicacao );
-    printf("Divisão: %lf\n", divisao);
-
-    return 0;
-
+    }
+    printf("**Elementos da matriz 3x3 multiplicados por 2** \n");
+    for(int i =0; i < 3; i++){
+        for(int j = 0; j <3; j++){
+           printf("%d ", matriz[i][j] * 2);
+        }
+    }
 
 }
